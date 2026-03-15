@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getBlogPostBySlug, getBlogPosts } from '@/lib/cosmic'
 import BlogPostCard from '@/components/BlogPostCard'
+import MarkdownContent from '@/components/MarkdownContent'
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -91,10 +92,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Content */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {content ? (
-          <div
-            className="prose prose-lg max-w-none text-charcoal-700 prose-headings:text-charcoal-950 prose-a:text-rust-700 prose-strong:text-charcoal-900 [&_p]:mb-4 [&_h2]:mt-8 [&_h2]:mb-4 [&_h3]:mt-6 [&_h3]:mb-3 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:mb-2"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          <MarkdownContent content={content} />
         ) : (
           <p className="text-charcoal-500 text-center py-8">No content available.</p>
         )}
