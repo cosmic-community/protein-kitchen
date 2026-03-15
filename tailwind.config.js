@@ -1,0 +1,73 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        cream: {
+          50: '#FEFDFB',
+          100: '#FAF7F2',
+          200: '#F5EDE0',
+          300: '#EDE0CC',
+          400: '#E0CEB0',
+        },
+        rust: {
+          50: '#FDF2F2',
+          100: '#FCE4E4',
+          200: '#F9CCCC',
+          300: '#F2A3A3',
+          400: '#E86B6B',
+          500: '#D94444',
+          600: '#C53030',
+          700: '#A52424',
+          800: '#8B1A1A',
+          900: '#751717',
+        },
+        amber: {
+          50: '#FDF8F0',
+          100: '#FAF0DD',
+          200: '#F5E0BB',
+          300: '#EDCC8E',
+          400: '#D4A574',
+          500: '#C4915C',
+          600: '#B07B45',
+          700: '#936338',
+          800: '#7A5230',
+          900: '#654429',
+        },
+        sage: {
+          50: '#F4F6EF',
+          100: '#E8ECDF',
+          200: '#D3DAC2',
+          300: '#B5C19C',
+          400: '#96A87A',
+          500: '#7A8F5E',
+          600: '#6B7B3A',
+          700: '#4F5D2F',
+          800: '#414C29',
+          900: '#384125',
+        },
+        charcoal: {
+          50: '#F6F6F6',
+          100: '#E7E7E7',
+          200: '#D1D1D1',
+          300: '#B0B0B0',
+          400: '#888888',
+          500: '#6D6D6D',
+          600: '#5D5D5D',
+          700: '#4F4F4F',
+          800: '#454545',
+          900: '#2D2D2D',
+          950: '#1A1A1A',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
